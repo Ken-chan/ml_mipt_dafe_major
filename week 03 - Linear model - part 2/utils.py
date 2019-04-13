@@ -4,7 +4,7 @@ import numpy as np
 
 def print_cv_results(a, len_gs, params, param_r, param_sep): 
     d = len(params['param_grid'][param_sep])
-    ar=np.array(a).reshape(len_gs,d)
+    ar=np.array(a).reshape(d, len_gs).T
     
     df=pd.DataFrame(ar)
 
